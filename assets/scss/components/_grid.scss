@@ -1,0 +1,338 @@
+@use 'sass:math';
+
+// Containers
+.bp__full-width {
+    width: 100%;
+    flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+.bp__container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    &.s {
+        max-width: $container-s;
+    }
+    &.m {
+        max-width: $container-m;
+    }
+    &.l {
+        max-width: $container;
+    }
+    &.xl {
+        max-width: $container-xl;
+    }
+    &.xxl {
+        max-width: $container-xxl;
+    }
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @media #{$xxl-and-up} {
+        width: 80%;
+    }
+}
+
+// Margins
+.mx-auto {
+    margin: 0 auto;
+}
+.ml-auto {
+    margin-left: auto;
+}
+.mr-auto {
+    margin-right: auto;
+}
+
+// Rows
+.bp__row {
+    margin-left: calc(-1 * $gutter-size / 2);
+    margin-right: calc(-1 * $gutter-size / 2);
+    display: flex;
+    flex-wrap: wrap;
+    &.no-margin {
+        margin-bottom: 0;
+    }
+    &.start {
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+    &.center {
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    &.end {
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+    &.start-l {
+        @media #{$l-and-up} {
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+        }
+    }
+    &.center-l {
+        @media #{$l-and-up} {
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+    }
+    &.end-l {
+        @media #{$l-and-up} {
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+        }
+    }
+    .col {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: calc($gutter-size / 2);
+        padding-right: calc($gutter-size / 2);
+        margin-bottom: $gutter-size;
+        min-height: 1px;
+        position: relative;
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+
+        // Declaring Columns on larger breakpoints
+        &.m,
+        &.l,
+        &.xl,
+        &.xxl {
+            -ms-flex-preferred-size: 1;
+            flex-basis: auto;
+            -ms-flex-positive: 2;
+            flex-grow: 2;
+            max-width: none;
+        }
+
+        &.no-padding {
+            padding: 0;
+        }
+        &.no-margin {
+            margin-bottom: 0;
+        }
+
+        &.s-auto {
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+            width: auto;
+            max-width: 100%;
+        }
+        &.s-fluid {
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            max-width: 100%;
+        }
+
+        $i: 1;
+        @while $i <= $num-cols {
+            $percentage: unquote(math.div(100, math.div($num-cols, $i)) + "%");
+            &.s#{$i} {
+                flex: 0 0 $percentage;
+                -ms-flex: 0 0 $percentage;
+                max-width: $percentage;
+            }
+            $i: $i + 1;
+        }
+
+        @media #{$m-and-up} {
+
+            // Declaring Columns on larger breakpoints
+            &.m {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+
+            &.m-auto {
+                -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+                width: auto;
+                max-width: 100%;
+            }
+            &.m-fluid {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+
+            $i: 1;
+            @while $i <= $num-cols {
+                $percentage: unquote(math.div(100, math.div($num-cols, $i)) + "%");
+                &.m#{$i} {
+                    flex: 0 0 $percentage;
+                    -ms-flex: 0 0 $percentage;
+                    max-width: $percentage;
+                }
+                $i: $i + 1;
+            }
+
+        }
+
+        @media #{$l-and-up} {
+
+            // Declaring Columns on larger breakpoints
+            &.l {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+
+            &.l-auto {
+                -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+                width: auto;
+                max-width: 100%;
+            }
+            &.l-fluid {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+
+            $i: 1;
+            @while $i <= $num-cols {
+                $percentage: unquote(math.div(100, math.div($num-cols, $i)) + "%");
+                &.l#{$i} {
+                    flex: 0 0 $percentage;
+                    -ms-flex: 0 0 $percentage;
+                    max-width: $percentage;
+                }
+                $i: $i + 1;
+            }
+
+        }
+
+        @media #{$xl-and-up} {
+
+            // Declaring Columns on larger breakpoints
+            &.xl {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+
+            &.xl-auto {
+                -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+                width: auto;
+                max-width: 100%;
+            }
+            &.xl-fluid {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+
+            $i: 1;
+            @while $i <= $num-cols {
+                $percentage: unquote(math.div(100, math.div($num-cols, $i)) + "%");
+                &.xl#{$i} {
+                    flex: 0 0 $percentage;
+                    -ms-flex: 0 0 $percentage;
+                    max-width: $percentage;
+                }
+                $i: $i + 1;
+            }
+
+        }
+
+        @media #{$xxl-and-up} {
+
+            // Declaring Columns on larger breakpoints
+            &.xxl {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+
+            &.xxl-auto {
+                -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+                width: auto;
+                max-width: 100%;
+            }
+            &.xxl-fluid {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+
+            $i: 1;
+            @while $i <= $num-cols {
+                $percentage: unquote(math.div(100, math.div($num-cols, $i)) + "%");
+                &.xxl#{$i} {
+                    flex: 0 0 $percentage;
+                    -ms-flex: 0 0 $percentage;
+                    max-width: $percentage;
+                }
+                $i: $i + 1;
+            }
+        }
+
+        @media #{$xxxl-and-up} {
+
+            // Declaring Columns on larger breakpoints
+            &.xxxl {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+
+            &.xxxl-auto {
+                -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+                width: auto;
+                max-width: 100%;
+            }
+            &.xxxl-fluid {
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+
+            $i: 1;
+            @while $i <= $num-cols {
+                $percentage: unquote(math.div(100, math.div($num-cols, $i)) + "%");
+                &.xxxl#{$i} {
+                    flex: 0 0 $percentage;
+                    -ms-flex: 0 0 $percentage;
+                    max-width: $percentage;
+                }
+                $i: $i + 1;
+            }
+        }
+    }
+}

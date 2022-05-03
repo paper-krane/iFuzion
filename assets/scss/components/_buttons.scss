@@ -1,0 +1,256 @@
+@keyframes button-background {
+    0% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform-origin: 0 50%;
+        -webkit-transform-origin: 0 50%;
+    }
+    100% {
+        transform: translateX(-75%);
+        -webkit-transform: translateX(-75%);
+    }
+}
+@-webkit-keyframes button-background {
+    0% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-75%);
+        -webkit-transform: translateX(-75%);
+    }
+}
+
+@keyframes button-box-shadow {
+    0% {
+        box-shadow: 0 0px 32px 2px rgba(3,224,193, .24), 0 0px 22px 2px rgba(3,224,193, .22), 0 0px 12px 0px rgba(3,224,193, .4);
+    }
+    25% {
+        box-shadow: 0 0px 32px 2px rgba(16,255,249, .24), 0 0px 22px 2px rgba(16,255,249, .22), 0 0px 12px 0px rgba(16,255,249, .4);
+    }
+    50% {
+        box-shadow: 0 0px 32px 2px rgba(231,229,44, .24), 0 0px 22px 2px rgba(231,229,44, .22), 0 0px 12px 0px rgba(231,229,44, .4);
+    }
+    75% {
+        box-shadow: 0 0px 32px 2px rgba(255,162,73, .24), 0 0px 22px 2px rgba(255,162,73, .22), 0 0px 12px 0px rgba(255,162,73, .4);
+    }
+    100% {
+        box-shadow: 0 0px 32px 2px rgba(3,224,193, .24), 0 0px 22px 2px rgba(3,224,193, .22), 0 0px 12px 0px rgba(3,224,193, .4);
+    }
+}
+
+@-webkit-keyframes button-box-shadow {
+    0% {
+        box-shadow: 0 0px 32px 2px rgba(3,224,193, .24), 0 0px 22px 2px rgba(3,224,193, .22), 0 0px 12px 0px rgba(3,224,193, .4);
+    }
+    25% {
+        box-shadow: 0 0px 32px 2px rgba(16,255,249, .24), 0 0px 22px 2px rgba(16,255,249, .22), 0 0px 12px 0px rgba(16,255,249, .4);
+    }
+    50% {
+        box-shadow: 0 0px 32px 2px rgba(231,229,44, .24), 0 0px 22px 2px rgba(231,229,44, .22), 0 0px 12px 0px rgba(231,229,44, .4);
+    }
+    75% {
+        box-shadow: 0 0px 32px 2px rgba(255,162,73, .24), 0 0px 22px 2px rgba(255,162,73, .22), 0 0px 12px 0px rgba(255,162,73, .4);
+    }
+    100% {
+        box-shadow: 0 0px 32px 2px rgba(3,224,193, .24), 0 0px 22px 2px rgba(3,224,193, .22), 0 0px 12px 0px rgba(3,224,193, .4);
+    }
+}
+
+@keyframes button-inset-box-shadow {
+    0% {
+        box-shadow:inset 0 0px 16px 2px rgba(3,224,193, .24), inset 0 0px 12px 2px rgba(3,224,193, .22), inset 0 0px 5px 0px rgba(3,224,193, .3);
+    }
+    25% {
+        box-shadow:inset 0 0px 16px 2px rgba(16,255,249, .24), inset 0 0px 12px 2px rgba(16,255,249, .22), inset 0 0px 5px 0px rgba(16,255,249, .3);
+    }
+    50% {
+        box-shadow:inset 0 0px 16px 2px rgba(231,229,44, .24), inset 0 0px 12px 2px rgba(231,229,44, .22), inset 0 0px 5px 0px rgba(231,229,44, .3);
+    }
+    75% {
+        box-shadow:inset 0 0px 16px 2px rgba(255,162,73, .24), inset 0 0px 12px 2px rgba(255,162,73, .22), inset 0 0px 5px 0px rgba(255,162,73, .3);
+    }
+    100% {
+        box-shadow:inset 0 0px 16px 2px rgba(3,224,193, .24), inset 0 0px 12px 2px rgba(3,224,193, .22), inset 0 0px 5px 0px rgba(3,224,193, .3);
+    }
+}
+
+@-webkit-keyframes button-inset-box-shadow {
+    0% {
+        box-shadow:inset 0 0px 16px 2px rgba(3,224,193, .24), inset 0 0px 12px 2px rgba(3,224,193, .22), inset 0 0px 5px 0px rgba(3,224,193, .3);
+    }
+    25% {
+        box-shadow:inset 0 0px 16px 2px rgba(16,255,249, .24), inset 0 0px 12px 2px rgba(16,255,249, .22), inset 0 0px 5px 0px rgba(16,255,249, .3);
+    }
+    50% {
+        box-shadow:inset 0 0px 16px 2px rgba(231,229,44, .24), inset 0 0px 12px 2px rgba(231,229,44, .22), inset 0 0px 5px 0px rgba(231,229,44, .3);
+    }
+    75% {
+        box-shadow:inset 0 0px 16px 2px rgba(255,162,73, .24), inset 0 0px 12px 2px rgba(255,162,73, .22), inset 0 0px 5px 0px rgba(255,162,73, .3);
+    }
+    100% {
+        box-shadow:inset 0 0px 16px 2px rgba(3,224,193, .24), inset 0 0px 12px 2px rgba(3,224,193, .22), inset 0 0px 5px 0px rgba(3,224,193, .3);
+    }
+}
+
+.btn {
+    font-size: .875rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    outline: none;
+	position: relative;
+	z-index: 0;
+    -webkit-tap-highlight-color: transparent;
+	-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.btn, .btn:visited {
+    background-color: $primary-color;
+    background-image: linear-gradient(-45deg, $primary-color, $secondary-color);
+    background-image: -webkit-linear-gradient(-45deg, $primary-color, $secondary-color);
+    color: $black;
+    padding: .15em;
+    box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0), 0 3px 14px 2px rgba(0, 0, 0, 0), 0 5px 5px -3px rgba(0, 0, 0, 0);
+    animation-name: button-pre-box-shadow;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-animation-name: button-pre-box-shadow;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+	transition: opacity 0.4s ease, color 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+
+    .btn-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        transition: opacity 0.4s ease;
+        opacity: 0;
+        overflow: hidden;
+        animation-name: button-box-shadow;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        -webkit-animation-name: button-box-shadow;
+        -webkit-animation-duration: 6s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+
+        &:not(.standard):before {
+            transition: opacity 0.4s ease, box-shadow 0.4s ease;
+            opacity: 1;
+            transform-origin: 0 0;
+            -webkit-transform-origin: 0 0;
+            animation-name: button-background;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            -webkit-animation-name: button-background;
+            -webkit-animation-duration: 6s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 400%;
+            height: 100%;
+            background: rgb(3,224,193);
+            background-image: linear-gradient(90deg, $primary-color 0%, rgba(16,255,249,1) 25%, rgba(231,229,44,1) 50%, rgba(255,162,73,1) 75%, rgba(3,224,193,1) 100%);
+        }
+    }
+
+    .btn-label {
+        color: $black;
+        display: inline-block;
+        border-radius: 50px;
+        position: relative;
+        background-color: transparent;
+        min-width: 40px;
+        height: 52px;
+        line-height: 52px;
+        padding-left: 2em;
+        padding-right: 2em;
+        transition: color 0.4s ease, background-color 0.4s ease;
+
+        &:not(.standard):before {
+            transition: opacity 0.4s ease;
+            opacity: 0;
+            animation-name: button-inset-box-shadow;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            -webkit-animation-name: button-inset-box-shadow;
+            -webkit-animation-duration: 6s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            content: '';
+            top: 0;
+            left: 0;
+            border-radius: 50px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+    }
+
+    &.hero {
+        .btn-bg {
+            opacity: 1;
+        }
+    
+        .btn-label {
+            color: $white;
+            background-color: $black;
+    
+            &:not(.standard):before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &.outline {
+        background-color: $white;
+        background-image: none;
+
+        .btn-label {
+            color: $white;
+            background-color: $black;
+        }
+    }
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: $secondary-color;
+    color: $black;
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+
+    .btn-bg {
+        opacity: 1;
+    }
+
+    .btn-label {
+        color: $white;
+        background-color: $black;
+
+        &:before {
+            opacity: 1;
+        }
+    }
+}

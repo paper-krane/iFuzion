@@ -1,0 +1,69 @@
+// Media Queries
+$mobile-screen: 599.98px !default;
+$tablet-screen-down: 991.98px !default;
+$desktop-screen-down: 1279.98px !default;
+$desktop-large-screen-down: 1599.98px !default;
+$mobile-landscape-screen-up: 600px !default;
+$tablet-landscape-screen-up: 992px !default;
+$desktop-screen-up: 1280px !default;
+$desktop-large-screen-up: 1600px !default;
+$desktop-extra-large-screen-up: 2000px !default;
+
+$s-and-down: "only screen and (max-width : #{$mobile-screen})" !default;
+$m-and-down: "only screen and (max-width : #{$tablet-screen-down})" !default;
+$l-and-down: "only screen and (max-width : #{$desktop-screen-down})" !default;
+$xl-and-down: "only screen and (max-width : #{$desktop-large-screen-down})" !default;
+$m-and-up: "only screen and (min-width : #{$mobile-landscape-screen-up})" !default;
+$l-and-up: "only screen and (min-width : #{$tablet-landscape-screen-up})" !default;
+$xl-and-up: "only screen and (min-width : #{$desktop-screen-up})" !default;
+$xxl-and-up: "only screen and (min-width : #{$desktop-large-screen-up})" !default;
+$xxxl-and-up: "only screen and (min-width : #{$desktop-extra-large-screen-up})" !default;
+
+// Gutters & Spacing
+$container: 1080px;
+$container-s: 600px;
+$container-m: 800px;
+$container-xl: 1280px;
+$container-xxl: 1600px;
+
+$num-cols: 12 !default;
+$gutter-size: 32px !default;
+
+// Colors 
+$site-bg: #000000 !default;
+$font-color: #eeeeee !default;
+$font-accent-color: #aaaaaa !default;
+$heading-font-color: #ffffff !default;
+$primary-color: #00dba4 !default;
+$secondary-color: #e7e52c !default;
+$highlight-color: #cccccc !default;
+$black: #000000 !default;
+$white: #ffffff !default;
+
+// Fonts
+$font-stack: 'Neue Haas Grotesk Display Pro', sans-serif !default;
+$font-weight: 400 !default;
+$heading-font-stack: 'Neue Haas Grotesk Display Pro', sans-serif !default;
+$heading-font-weight: 900 !default;
+
+$h1-fontsize-mobile: 2.5rem !default;
+$h2-fontsize-mobile: 2rem !default;
+$h3-fontsize-mobile: 1.75rem !default;
+$h4-fontsize-mobile: 1.5rem !default;
+$h5-fontsize-mobile: 1.25rem !default;
+$h6-fontsize-mobile: 1.15rem !default;
+$h1-fontsize: 3.5rem !default;
+$h2-fontsize: 3.25rem !default;
+$h3-fontsize: 2.75rem !default;
+$h4-fontsize: 2.5rem !default;
+$h5-fontsize: 1.75rem !default;
+$h6-fontsize: 1.5rem !default;
+$h1-fontsize-desktop: 4rem !default;
+$h2-fontsize-desktop: 3.5rem !default;
+$h3-fontsize-desktop: 3.25rem !default;
+$h4-fontsize-desktop: 2.75rem !default;
+$h5-fontsize-desktop: 1.75rem !default;
+$h6-fontsize-desktop: 1.5rem !default;
+
+// Design Rules
+$transition: all 0.4s ease !default;

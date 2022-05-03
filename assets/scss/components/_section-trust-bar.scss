@@ -1,0 +1,21 @@
+#bp__trust-bar {
+    margin-top: 108px;
+    margin-bottom: 108px;
+
+    .col {
+        padding: 0 16px;
+        margin-bottom: 0;
+    }
+
+    @media #{$l-and-up} {
+        .col {
+            padding: 0 20px;
+        }
+    }
+
+    @media #{$xxl-and-up} {
+        .col {
+            padding: 0 32px;
+        }
+    }
+}
